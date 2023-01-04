@@ -1,0 +1,1 @@
+C:\Users\alexL\Desktop\C#\StackPanel\StackPanel\StackPanel.csproj;x86
