@@ -88,7 +88,7 @@
                     <MediaElement x:ConnectionId='8' Name="MyMediaElement"
                                   AutoPlay="True"/>
 
-                    <TextBlock x:ConnectionId='9' Name="CategoryTextBlock" Text="All Sounds" FontSize="24" IsColorFontEnabled="False" />
+                    <TextBlock x:ConnectionId='9' Name="CategoryTextBlock" Text="All Sounds" FontSize="24" Foreground="Black" />
 
                     <GridView x:ConnectionId='10' Grid.Row="1"
                               Name="SoundGridView"
