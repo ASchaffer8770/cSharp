@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-01-04T22:29:51.788</Modified>
+      <Modified>2023-01-05T16:48:53.966</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\UWP SoundBoard.exe">
       <PackagePath>entrypoint\UWP SoundBoard.exe</PackagePath>
-      <Modified>2023-01-04T22:29:51.235</Modified>
+      <Modified>2023-01-05T16:48:53.324</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -218,15 +218,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\UWP SoundBoard.xr.xml">
       <PackagePath>UWP SoundBoard.xr.xml</PackagePath>
-      <Modified>2023-01-04T22:21:10.109</Modified>
+      <Modified>2023-01-05T16:48:53.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-01-04T22:29:51.166</Modified>
+      <Modified>2023-01-05T16:48:53.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-01-04T22:29:51.166</Modified>
+      <Modified>2023-01-05T16:48:53.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22621.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -238,7 +238,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\Core\UWP SoundBoard.exe">
       <PackagePath>UWP SoundBoard.exe</PackagePath>
-      <Modified>2023-01-04T22:29:51.784</Modified>
+      <Modified>2023-01-05T16:48:53.963</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

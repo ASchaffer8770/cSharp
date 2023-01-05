@@ -21,6 +21,7 @@
                 Click="HamburgerButton_Click"
                 Height="45"
                 Width="45"
+                Background="Gray"
                 FontSize="20"
                 FontFamily="Segoe MDL2 Assets"
                 Content="&#xE700;"/>
@@ -29,12 +30,14 @@
                 Click="BackButton_Click"
                 Height="45"
                 Width="45"
+                Background="Gray"
                 FontSize="20"
                 FontFamily="Segoe MDL2 Assets"
                 Content="&#xE0A6;"
                 RelativePanel.RightOf="HamburgerButton"/>
             <AutoSuggestBox 
                 Name="SearchAutoSuggestBox"
+                Background="Gray"
                 PlaceholderText="Search For Sounds"
                 Width="200"
                 QueryIcon="Find"
@@ -65,6 +68,7 @@
                                        Margin="-10, 10, 0, 10"/>
                                 <TextBlock Text="{x:Bind Category}" 
                                            FontSize="18" 
+                                           
                                            Margin="10,0,0,0"
                                            VerticalAlignment="Center"/>
                             </StackPanel>
@@ -78,12 +82,13 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
+                        
                     </Grid.RowDefinitions>
 
                     <MediaElement Name="MyMediaElement"
                                   AutoPlay="True"/>
 
-                    <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontSize="24" />
+                    <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontSize="24" IsColorFontEnabled="False" />
 
                     <GridView Grid.Row="1"
                               Name="SoundGridView"

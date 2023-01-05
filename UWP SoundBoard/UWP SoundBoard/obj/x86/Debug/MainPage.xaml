@@ -21,6 +21,7 @@
                                              
                 Height="45"
                 Width="45"
+                Background="Gray"
                 FontSize="20"
                 FontFamily="Segoe MDL2 Assets"
                 Content="&#xE700;"/>
@@ -29,12 +30,14 @@
                                         
                 Height="45"
                 Width="45"
+                Background="Gray"
                 FontSize="20"
                 FontFamily="Segoe MDL2 Assets"
                 Content="&#xE0A6;"
                 RelativePanel.RightOf="HamburgerButton"/>
             <AutoSuggestBox x:ConnectionId='15' 
                 Name="SearchAutoSuggestBox"
+                Background="Gray"
                 PlaceholderText="Search For Sounds"
                 Width="200"
                 QueryIcon="Find"
@@ -65,6 +68,7 @@
                                        Margin="-10, 10, 0, 10"/>
                                 <TextBlock x:ConnectionId='7'                          
                                            FontSize="18" 
+                                           
                                            Margin="10,0,0,0"
                                            VerticalAlignment="Center"/>
                             </StackPanel>
@@ -78,12 +82,13 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
+                        
                     </Grid.RowDefinitions>
 
                     <MediaElement x:ConnectionId='8' Name="MyMediaElement"
                                   AutoPlay="True"/>
 
-                    <TextBlock x:ConnectionId='9' Name="CategoryTextBlock" Text="All Sounds" FontSize="24" />
+                    <TextBlock x:ConnectionId='9' Name="CategoryTextBlock" Text="All Sounds" FontSize="24" IsColorFontEnabled="False" />
 
                     <GridView x:ConnectionId='10' Grid.Row="1"
                               Name="SoundGridView"
