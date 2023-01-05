@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.Serialization;
@@ -11,12 +12,17 @@ namespace UWP_Weather
 {
     public class OpenWeatherMapProxy
     {
-        public async static Root GetWeather(double lat, double lon)
+        public async static Task<Root> GetWeather(double lat, double lon)
         {
             var http = new HttpClient();
             var response = await http.GetAsync("https://api.weatherapi.com/v1/current.json?key=4b40e4471568477e9f3191044230501&q=47.6588,-117.4260&aqi=no");
             var result = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(Root));
+
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            var data = (Root)serializer.ReadObject(ms);
+
+            return data;
         }
     }
 

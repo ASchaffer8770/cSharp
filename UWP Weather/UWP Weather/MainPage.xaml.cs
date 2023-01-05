@@ -27,9 +27,11 @@ namespace UWP_Weather
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            Root myWeather = await OpenWeatherMapProxy.GetWeather(20.0, 30.0);
 
+            ResultTextBlock.Text = myWeather.name + " - " + myWeather.main.temp + " - " + myWeather.weather[0].description;
         }
     }
 }
