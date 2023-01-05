@@ -30,7 +30,7 @@ namespace HeroExplorer.Models
         {
             public int available { get; set; }
             public string collectionURI { get; set; }
-            public List<Item> items { get; set; }
+            public List<Events> items { get; set; }
             public int returned { get; set; }
         }
 
