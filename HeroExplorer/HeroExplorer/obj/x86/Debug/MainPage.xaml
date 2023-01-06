@@ -20,17 +20,20 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <ListView x:ConnectionId='2' Name="MasterListView"                                        >
+        <ListView x:ConnectionId='2' Name="MasterListView" 
+                  IsItemClickEnabled="True"
+                                                      
+                                                         >
             <ListView.ItemTemplate>
                 <DataTemplate                             >
-                    <StackPanel x:ConnectionId='6' Orientation="Horizontal" Margin="10, 5, 0, 5">
+                    <StackPanel x:ConnectionId='9' Orientation="Horizontal" Margin="10, 5, 0, 5">
                         <Ellipse Width="45"
                                  Height="45">
                             <Ellipse.Fill>
-                                <ImageBrush x:ConnectionId='8'                                        />
+                                <ImageBrush x:ConnectionId='11'                                        />
                             </Ellipse.Fill>
                         </Ellipse>
-                        <TextBlock x:ConnectionId='7'                     
+                        <TextBlock x:ConnectionId='10'                     
                                    VerticalAlignment="center"
                                    FontSize="18"
                                    Margin="10,0,0,0"/>
@@ -39,8 +42,34 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Grid x:ConnectionId='3' Name="DetailGrid" Grid.Column="1" Grid.Row="0"> 
-            
+        <Grid x:ConnectionId='3' Name="DetailGrid" Grid.Column="1" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image x:ConnectionId='5' Name ="DetailImage" 
+                       Grid.Column="0" 
+                       Grid.RowSpan="2"  />
+                <TextBlock x:ConnectionId='6' Name="DetailNameTextBlock" 
+                           FontSize="32" 
+                           Grid.Column="1" />
+                <TextBlock x:ConnectionId='7' Name="DetailDescriptionTextBlock" 
+                           Grid.Row="1" 
+                           Grid.Column="1"
+                           TextWrapping="Wrap" />
+            </Grid>
         </Grid>
 
         <TextBlock Text="Data provided by Marvel. © 2023 MARVEL"
