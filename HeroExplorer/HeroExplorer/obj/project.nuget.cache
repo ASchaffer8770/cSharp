@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DcWELmhokp2XAdPdbTiv/lr9qoAG9f0GHC3NY2jEjZEZgixWBsFa/xE2ntzyqXtqM1M+zD5W2L8xPIL6mXdg/g==",
+  "dgSpecHash": "tprCJ2eKAL7gtwt0YrF2MvFDURlRBSMToEBeHKcm3O285zmPzLv6TQxqvpBYy7bYYggNCiMwoBEFlfcn+4sDlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexL\\Desktop\\C#\\HeroExplorer\\HeroExplorer\\HeroExplorer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alexL\\.nuget\\packages\\microsoft.bcl\\1.1.10\\microsoft.bcl.1.1.10.nupkg.sha512",
+    "C:\\Users\\alexL\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
+    "C:\\Users\\alexL\\.nuget\\packages\\microsoft.net.http\\2.2.29\\microsoft.net.http.2.2.29.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.12-rel-31116-00\\microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.14\\microsoft.net.uwpcoreruntimesdk.2.2.14.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
