@@ -29,7 +29,7 @@ namespace HeroExplorer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var data = MarvelFacade.GetCharacterList();
+            var data = MarvelFacade.GetCharacterDataWrapper();
 
         }
     }

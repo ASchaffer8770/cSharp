@@ -1,6 +1,7 @@
 ﻿using HeroExplorer.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 using Windows.Security.Cryptography;
 using Windows.Security.Cryptography.Core;
 using Windows.Storage.Streams;
+using static HeroExplorer.Models.CharacterDataWrapper;
 
 namespace HeroExplorer
 {
@@ -20,12 +22,33 @@ namespace HeroExplorer
         private const string PrivateKey = "1688654c0be7d6ca6bafa76c4d6e216e";
         private const string PublicKey = "29f67a991173cd72b752933506c458b6c4ef9d0b";
         private const int MaxCharacters = 1500;
+        private const string ImageNotAvailablePath = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available";
 
-        public async static Task<CharacterDataWrapper> GetCharacterList()
+        public static async Task PopulateMarvelCharacters(ObservableCollection<Character> marvelCharacters)
+        {
+            var characterDataWrapper = await GetCharacterDataWrapper();
+            var characters = characterDataWrapper.data.results;
+
+            foreach ( var character in characters )
+            {
+                //filter characters that are missing thumbnail images
+
+                if (character.thumbnail != null
+                    && character.thumbnail.path != ""
+                    && character.thumbnail.path != ImageNotAvailablePath)
+                {
+
+                    marvelCharacters.Add(character);
+                }
+            }
+
+        }
+
+        public async static Task<CharacterDataWrapper> GetCharacterDataWrapper()
         {
             //Assemble the URL
             Random random = new Random();
-            var offset = random.Next(1500);
+            var offset = random.Next(MaxCharacters);
 
 
             //Get the MD5 Hash

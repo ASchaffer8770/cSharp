@@ -8,7 +8,12 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Button x:ConnectionId='2'                      />
+        <Button x:ConnectionId='2'                     
+                Height="75"
+                Width="150"
+                Content="Make the Call"
+                FontSize="20"
+                Margin="20,0,0,0"/>
 
     </Grid>
 </Page>
