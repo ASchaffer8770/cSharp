@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\alexL\Desktop\C#\HeroExplorer\HeroExplorer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-01-06T19:13:00.284</Modified>
+      <Modified>2023-01-06T22:01:37.213</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\HeroExplorer\HeroExplorer\bin\x86\Debug\HeroExplorer.exe">
       <PackagePath>entrypoint\HeroExplorer.exe</PackagePath>
-      <Modified>2023-01-06T19:12:59.759</Modified>
+      <Modified>2023-01-06T22:01:36.617</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\.nuget\packages\microsoft.net.http\2.2.29\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
@@ -94,15 +94,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\HeroExplorer\HeroExplorer\bin\x86\Debug\HeroExplorer.xr.xml">
       <PackagePath>HeroExplorer.xr.xml</PackagePath>
-      <Modified>2023-01-06T19:12:59.702</Modified>
+      <Modified>2023-01-06T22:01:36.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\HeroExplorer\HeroExplorer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-01-06T19:12:59.706</Modified>
+      <Modified>2023-01-06T22:01:36.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\HeroExplorer\HeroExplorer\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-01-06T19:12:59.706</Modified>
+      <Modified>2023-01-06T22:01:36.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22621.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\HeroExplorer\HeroExplorer\bin\x86\Debug\Core\HeroExplorer.exe">
       <PackagePath>HeroExplorer.exe</PackagePath>
-      <Modified>2023-01-06T19:13:00.282</Modified>
+      <Modified>2023-01-06T22:01:37.209</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

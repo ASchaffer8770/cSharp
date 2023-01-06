@@ -19,14 +19,14 @@ namespace HeroExplorer
 {
     public class MarvelFacade
     {
-        private const string PrivateKey = "1688654c0be7d6ca6bafa76c4d6e216e";
-        private const string PublicKey = "29f67a991173cd72b752933506c458b6c4ef9d0b";
+        private const string PrivateKey = "29f67a991173cd72b752933506c458b6c4ef9d0b";
+        private const string PublicKey = "1688654c0be7d6ca6bafa76c4d6e216e";
         private const int MaxCharacters = 1500;
         private const string ImageNotAvailablePath = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available";
 
-        public static async Task PopulateMarvelCharacters(ObservableCollection<Character> marvelCharacters)
+        public static async Task PopulateMarvelCharactersAsync(ObservableCollection<Character> marvelCharacters)
         {
-            var characterDataWrapper = await GetCharacterDataWrapper();
+            var characterDataWrapper = await GetCharacterDataWrapperAsync();
             var characters = characterDataWrapper.data.results;
 
             foreach ( var character in characters )
@@ -37,6 +37,13 @@ namespace HeroExplorer
                     && character.thumbnail.path != ""
                     && character.thumbnail.path != ImageNotAvailablePath)
                 {
+                    character.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                        character.thumbnail.path,
+                        character.thumbnail.extension);
+
+                    character.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
+                        character.thumbnail.path,
+                        character.thumbnail.extension);
 
                     marvelCharacters.Add(character);
                 }
@@ -44,7 +51,7 @@ namespace HeroExplorer
 
         }
 
-        public async static Task<CharacterDataWrapper> GetCharacterDataWrapper()
+        public async static Task<CharacterDataWrapper> GetCharacterDataWrapperAsync()
         {
             //Assemble the URL
             Random random = new Random();
@@ -56,7 +63,7 @@ namespace HeroExplorer
             var hash = CreateHash(timeStamp);
 
 
-            string url = String.Format("https://gateway.marvel.com:443/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp);
+            string url = String.Format("https://gateway.marvel.com:443/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
 
 
             //Call out to Marvel

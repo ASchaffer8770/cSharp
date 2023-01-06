@@ -1,5 +1,7 @@
-﻿using System;
+﻿using HeroExplorer.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,15 +24,24 @@ namespace HeroExplorer
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public ObservableCollection<Character> MarvelCharacters { get; private set; }
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            MarvelCharacters = new ObservableCollection<Character>();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var data = MarvelFacade.GetCharacterDataWrapper();
+            MyProgressRing.IsActive = true;
+            MyProgressRing.Visibility = Visibility.Visible;
 
+            await MarvelFacade.PopulateMarvelCharactersAsync(MarvelCharacters);
+
+            MyProgressRing.IsActive = false;
+            MyProgressRing.Visibility = Visibility.Collapsed;
         }
     }
 }
