@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -39,7 +40,11 @@ namespace HeroExplorer
             MyProgressRing.IsActive = true;
             MyProgressRing.Visibility = Visibility.Visible;
 
-            await MarvelFacade.PopulateMarvelCharactersAsync(MarvelCharacters);
+            while (MarvelCharacters.Count < 10)
+            {
+                Task t = MarvelFacade.PopulateMarvelCharactersAsync(MarvelCharacters);
+                await t;
+            }
 
             MyProgressRing.IsActive = false;
             MyProgressRing.Visibility = Visibility.Collapsed;

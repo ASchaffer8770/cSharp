@@ -42,7 +42,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Grid x:ConnectionId='3' Name="DetailGrid" Grid.Column="1" Grid.Row="0">
+        <Grid x:ConnectionId='3' Name="DetailGrid" Grid.Column="1" Grid.Row="0" Margin="10, 0, 10, 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -51,7 +51,7 @@
 
             <Grid Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -61,14 +61,19 @@
 
                 <Image x:ConnectionId='5' Name ="DetailImage" 
                        Grid.Column="0" 
-                       Grid.RowSpan="2"  />
+                       Grid.RowSpan="2"
+                       VerticalAlignment="Top"/>
+                
                 <TextBlock x:ConnectionId='6' Name="DetailNameTextBlock" 
                            FontSize="32" 
-                           Grid.Column="1" />
+                           Grid.Column="1" 
+                           Margin="10,0,0,0"/>
+                
                 <TextBlock x:ConnectionId='7' Name="DetailDescriptionTextBlock" 
                            Grid.Row="1" 
                            Grid.Column="1"
-                           TextWrapping="Wrap" />
+                           TextWrapping="Wrap"
+                           Margin="10,0,0,0"/>
             </Grid>
         </Grid>
 
