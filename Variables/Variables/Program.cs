@@ -9,8 +9,21 @@ y = x + 3;
 Console.WriteLine(y);
 */
 
-string myFirstName;
-myFirstName = "Alex";
-Console.WriteLine(myFirstName);
+//var myFirstName = "Alex";
+
+//myFirstName = "Alex";
+
+//Console.WriteLine(myFirstName);
+
+int x = 7;
+//string y = "Alex";
+string y = "5";
+string myFirstTry = x.ToString() + y;
+
+//int mySecondTry = x + y;
+int mySecondTry = x + int.Parse(y);
+
+
+Console.WriteLine(mySecondTry);
 
 Console.ReadLine();
