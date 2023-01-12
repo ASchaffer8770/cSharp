@@ -57,7 +57,7 @@ namespace HeroExplorer
         }
 
 
-        public static async Task PopulateMarvelComicsAsync(int characterId, ObservableCollection<ComicBook> marvelComics)
+        public static async Task PopulateMarvelComicsAsync(int characterId, ObservableCollection<Comicbook> MarvelComics)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace HeroExplorer
                             comic.thumbnail.path,
                             comic.thumbnail.extension);
 
-                        marvelComics.Add(comic);
+                        MarvelComics.Add(comic);
                     }
                 }
             }
@@ -113,7 +113,7 @@ namespace HeroExplorer
             return result;
         }
 
-        private static async Task<ComicDataWrapper> GetComicDataWrapperAsync(int characterId)
+        private static async Task<ComicDataWrapper> GetComicDataWrapperAsync(int characterId, ObservableCollection<Comicbook> MarvelComics)
         {
             var url = String.Format("http://gateway.marvel.com:80/v1/public/comics?characters={0}&limit=10",
                 characterId);
