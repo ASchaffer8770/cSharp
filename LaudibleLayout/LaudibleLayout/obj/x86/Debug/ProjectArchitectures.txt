@@ -1,0 +1,1 @@
+C:\Users\alexL\Desktop\C#\LaudibleLayout\LaudibleLayout\LaudibleLayout.csproj;x86

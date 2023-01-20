@@ -5,10 +5,59 @@
     xmlns:local="using:LaudibleLayout"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="3" 
+                   FontSize="48" 
+                   HorizontalAlignment="Left"
+                   Padding="0,0,0,20">ACME Sales Corp</TextBlock>
+        <TextBlock Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   FontSize="18"
+                   Padding="10"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left">First Name:</TextBlock>
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="1"
+                 Margin="0,0,0,10"></TextBox>
+        <TextBlock Grid.ColumnSpan="2"
+                   Grid.Row="2"
+                   FontSize="18"
+                   Padding="10"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left">Last Name:</TextBlock>
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="1"
+                 Margin="0,0,0,10"
+                 ></TextBox>
+        <TextBlock Grid.ColumnSpan="2"
+                   Grid.Row="3"
+                   FontSize="18"
+                   Padding="10"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left">Email:</TextBlock>
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="1"
+                 Margin="0,0,0,10"
+                 ></TextBox>
+        <Button Grid.Row="4"
+                VerticalAlignment="Top"
+                Grid.Column="1">SAVE</Button>
     </Grid>
 </Page>
