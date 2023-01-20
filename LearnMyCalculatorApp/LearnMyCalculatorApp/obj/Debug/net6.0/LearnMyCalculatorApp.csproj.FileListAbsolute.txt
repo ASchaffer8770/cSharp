@@ -1,0 +1,15 @@
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\bin\Debug\net6.0\LearnMyCalculatorApp.exe
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\bin\Debug\net6.0\LearnMyCalculatorApp.deps.json
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\bin\Debug\net6.0\LearnMyCalculatorApp.runtimeconfig.json
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\bin\Debug\net6.0\LearnMyCalculatorApp.dll
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\bin\Debug\net6.0\LearnMyCalculatorApp.pdb
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.csproj.AssemblyReference.cache
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.AssemblyInfoInputs.cache
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.AssemblyInfo.cs
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.csproj.CoreCompileInputs.cache
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.dll
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\refint\LearnMyCalculatorApp.dll
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.pdb
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\LearnMyCalculatorApp.genruntimeconfig.cache
+C:\Users\alexL\Desktop\C#\LearnMyCalculatorApp\LearnMyCalculatorApp\obj\Debug\net6.0\ref\LearnMyCalculatorApp.dll
