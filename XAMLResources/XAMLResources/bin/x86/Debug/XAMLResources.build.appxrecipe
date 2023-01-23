@@ -70,6 +70,12 @@
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\bin\x86\Debug\Dictionary1.xbf">
+      <PackagePath>Dictionary1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\bin\x86\Debug\Dictionary2.xbf">
+      <PackagePath>Dictionary2.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

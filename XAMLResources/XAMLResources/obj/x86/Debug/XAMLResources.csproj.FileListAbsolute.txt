@@ -43,3 +43,9 @@ C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\qualifiers.t
 C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_638018153300000000.json
+C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\bin\x86\Debug\Dictionary1.xbf
+C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\bin\x86\Debug\Dictionary2.xbf
+C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\Dictionary1.xaml
+C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\Dictionary2.xaml
+C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\Dictionary1.xbf
+C:\Users\alexL\Desktop\C#\XAMLResources\XAMLResources\obj\x86\Debug\Dictionary2.xbf
