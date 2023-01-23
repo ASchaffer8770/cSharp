@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Image Source="Assets/Financial.png"
+               VerticalAlignment="Top"/>
     </Grid>
 </Page>
