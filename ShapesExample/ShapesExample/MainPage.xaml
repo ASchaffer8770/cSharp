@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Line X1="10" X2="200" Y1="10" Y2="10" Stroke="Black" Fill="Black" StrokeThickness="5" StrokeEndLineCap="Triangle" /> 
     </Grid>
 </Page>
