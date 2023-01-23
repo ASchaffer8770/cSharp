@@ -1,0 +1,1 @@
+C:\Users\alexL\Desktop\C#\ScrollViewExample\ScrollViewExample\ScrollViewExample.csproj;x86
