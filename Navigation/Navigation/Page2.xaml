@@ -8,7 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <TextBlock FontSize="48" Text="Page 2"></TextBlock>
+        <HyperlinkButton Content="Go to Page 3" Click="HyperlinkButton_Click" />
+    </StackPanel>
 </Page>

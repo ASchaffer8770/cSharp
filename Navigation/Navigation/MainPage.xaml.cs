@@ -22,10 +22,12 @@ namespace Navigation
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private Frame myFrame;
         public MainPage()
         {
             this.InitializeComponent();
-            Frame.Navigate(typeof(Page1));
+            myFrame = new Frame();
+            myFrame.Navigate(typeof(Page1));
         }
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
