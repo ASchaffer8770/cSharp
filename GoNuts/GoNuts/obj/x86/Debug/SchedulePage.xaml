@@ -27,11 +27,13 @@
                    Text="Pickup: "
                    Grid.Row="1"/>
 
-            <CalendarDatePicker Grid.Row="1" Grid.Column="1" 
-                                Foreground="White"/>
+        <CalendarDatePicker Grid.Row="1" 
+                            Grid.Column="1" 
+                            Foreground="White"/>
 
-            <TimePicker Grid.Row="2" Grid.Column="1" 
-                        Foreground="White"/>
+        <TimePicker Grid.Row="2" 
+                    Grid.Column="1" 
+                    Foreground="White"/>
 
     </Grid>
 </Page>

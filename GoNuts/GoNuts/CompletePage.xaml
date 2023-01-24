@@ -8,7 +8,35 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Image Style="{StaticResource WhiteLogoStyle}" 
+               Source="Assets/color-logo.png" />
+
+        <Image Grid.Row="1" 
+               Source="Assets/ticket.jpg"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Width="300"/>
+
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="center" 
+                    VerticalAlignment="center" >
+            <TextBlock Text="Order" 
+                       FontSize="36"
+                       HorizontalAlignment="Center"
+                       Foreground="Black"/>
+            <TextBlock Text="96" 
+                       FontSize="64"
+                       VerticalAlignment="Center"
+                       Foreground="Black"/>
+        </StackPanel>
+
 
     </Grid>
 </Page>
