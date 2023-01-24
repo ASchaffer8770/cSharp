@@ -1,0 +1,1 @@
+C:\Users\alexL\Desktop\C#\xBindDataExample\xBindDataExample\xBindDataExample.csproj;x86
