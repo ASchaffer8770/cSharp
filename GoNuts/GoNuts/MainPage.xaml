@@ -13,7 +13,16 @@
             <Setter Property="HorizontalAlignment" Value="Stretch" />
             <Setter Property="VerticalAlignment" Value="Stretch" />
             <Setter Property="BorderBrush" Value="Gray" />
-            <Setter Property="BorderThickness" Value="0,0,2,0" />
+            <Setter Property="BorderThickness" Value="2,2,1,2" />
+        </Style>
+        <Style TargetType="Image" x:Key="IconImageStyle">
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Width" Value="25" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="NavTextBlock">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
     </Page.Resources>
 
@@ -32,13 +41,50 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="0" 
-                    Style="{StaticResource NavigationButtonStyle}">
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Donut"
+                    Click="Donut_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Assets/donut-icon.png" Height="20" Width="20"/>
-                    <TextBlock Text="Donut" Foreground="White"/>
+                    <Image Source="Assets/donut-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Donut" 
+                               Style="{StaticResource NavTextBlock}"/>
                 </StackPanel>
             </Button>
-            
+            <Button Grid.Column="1" 
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Coffee"
+                    Click="Coffee_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/coffee-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Coffee" 
+                               Style="{StaticResource NavTextBlock}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" 
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Schedule"
+                    Click="Schedule_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/schedule-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Schedule"
+                               Style="{StaticResource NavTextBlock}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" 
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Checkout"
+                    Click="Checkout_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/complete-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Checkout" 
+                               Style="{StaticResource NavTextBlock}"/>
+                </StackPanel>
+            </Button>
+
         </Grid>
 
         <Grid Grid.Row="1">

@@ -25,6 +25,27 @@ namespace GoNuts
         public MainPage()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(DonutPage));
+        }
+
+        private void Donut_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(DonutPage));
+        }
+
+        private void Coffee_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(CoffeePage));
+        }
+
+        private void Schedule_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(SchedulePage));
+        }
+
+        private void Checkout_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(CompletePage));
         }
     }
 }

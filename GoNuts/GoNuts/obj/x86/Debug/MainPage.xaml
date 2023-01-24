@@ -7,6 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="NavigationButtonStyle">
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="2,2,1,2" />
+        </Style>
+        <Style TargetType="Image" x:Key="IconImageStyle">
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Width" Value="25" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="NavTextBlock">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -22,19 +40,51 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" 
-                    Background="Black" 
-                    Foreground="White" 
-                    HorizontalAlignment="Stretch" 
-                    VerticalAlignment="Stretch"
-                    BorderBrush="Gray"
-                    BorderThickness="0,0,2,0">
+            <Button x:ConnectionId='3' Grid.Column="0" 
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Donut"
+                                       >
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Assets/donut-icon.png" Height="20" Width="20"/>
-                    <TextBlock Text="Donut" Foreground="White"/>
+                    <Image Source="Assets/donut-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Donut" 
+                               Style="{StaticResource NavTextBlock}"/>
                 </StackPanel>
             </Button>
-            
+            <Button x:ConnectionId='4' Grid.Column="1" 
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Coffee"
+                                        >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/coffee-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Coffee" 
+                               Style="{StaticResource NavTextBlock}"/>
+                </StackPanel>
+            </Button>
+            <Button x:ConnectionId='5' Grid.Column="2" 
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Schedule"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/schedule-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Schedule"
+                               Style="{StaticResource NavTextBlock}"/>
+                </StackPanel>
+            </Button>
+            <Button x:ConnectionId='6' Grid.Column="3" 
+                    Style="{StaticResource NavigationButtonStyle}"
+                    Name="Checkout"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/complete-icon.png" 
+                            Style="{StaticResource IconImageStyle}"/>
+                    <TextBlock Text="Checkout" 
+                               Style="{StaticResource NavTextBlock}"/>
+                </StackPanel>
+            </Button>
+
         </Grid>
 
         <Grid Grid.Row="1">
@@ -43,7 +93,9 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <Frame x:ConnectionId='2' Name="MyFrame"></Frame>
-            <Image Source="Assets/Background.jpg" Grid.Column="1" />
+            <Image Source="Assets/Background.jpg"
+                   Grid.Column="1"
+                   Stretch="UniformToFill"/>
         </Grid>
         
     </Grid>
