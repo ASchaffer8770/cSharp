@@ -6,9 +6,92 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:data="using:UWP_SoundBoard.Model"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <RelativePanel>
+            <Button Name="HamburgerButton"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    Click="HamburgerButton_Click"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE700;"
+                    Height="45"
+                    Width="45"
+                    FontSize="20"/>
+            
+            <Button Name="BackButton"
+                    RelativePanel.RightOf="HamburgerButton"
+                    Click="BackButton_Click"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE0A6;"
+                    Height="45"
+                    Width="45"
+                    FontSize="20"/>
+
+            <AutoSuggestBox Name="SearchAutoSuggestBox"
+                            TextChanged="SearchAutoSuggestBox_TextChanged"
+                            QuerySubmitted="SearchAutoSuggestBox_QuerySubmitted"
+                            RelativePanel.AlignRightWithPanel="True"
+                            Width="200"
+                            PlaceholderText="Search..."
+                            QueryIcon="Find"
+                            VerticalAlignment="Center"
+                            Margin="10"/>
+        </RelativePanel>
+
+        <SplitView Name="MySplitView"
+                   Grid.Row="1"
+                   DisplayMode="CompactOverlay"
+                   CompactPaneLength="45"
+                   OpenPaneLength="200">
+            <SplitView.Pane>
+                <ListView IsItemClickEnabled="True"
+                          Name="MenuItemsListView"
+                          ItemClick="MenuItemsListView_ItemClick" />
+
+
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <MediaElement Name="MyMediaElement"
+                                  AutoPlay="True" />
+
+                    <TextBlock Name="CategoryTextBlock"
+                               Text="All Sounds"
+                               FontSize="24"
+                               />
+                    <GridView Grid.Row="1" 
+                              Name="SoundGridView"
+                              SelectionMode="None"
+                              ItemsSource="{x:Bind Sounds}"
+                              IsItemClickEnabled="True"
+                              ItemClick="SoundGridView_ItemClick">
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Sound">
+                                <Image Name="MyImage"
+                                       Height="112"
+                                       Width="101"
+                                       Source="{x:Bind ImageFile}"
+                                       />
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+
+
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+        
     </Grid>
 </Page>
