@@ -7,8 +7,8 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="49c24c88-e299-45b7-aea3-394e22dcad34" Publisher="CN=alexL" Version="1.0.0.0" ProcessorArchitecture="x86" />
-  <mp:PhoneIdentity PhoneProductId="49c24c88-e299-45b7-aea3-394e22dcad34" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="f71ba677-944c-4fcd-9003-752f26ea51c1" Publisher="CN=alexL" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <mp:PhoneIdentity PhoneProductId="f71ba677-944c-4fcd-9003-752f26ea51c1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>UWP SoundBoard</DisplayName>
     <PublisherDisplayName>alexL</PublisherDisplayName>
@@ -48,7 +48,7 @@
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2022" />
     <build:Item Name="OperatingSystem" Version="10.0.22621.1 (WinBuild.160101.0800)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="17.4.33122.133" />
-    <build:Item Name="ProjectGUID" Value="{CEAC0676-5836-445F-8101-494E16A5688A}" />
+    <build:Item Name="ProjectGUID" Value="{E3102A60-598F-4A1A-B6C2-B9471192874C}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="0.0.0.0" />

@@ -1,15 +1,3 @@
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\UWP SoundBoard.csproj.AssemblyReference.cache
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.g.i.cs
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.g.cs
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.g.i.cs
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.g.cs
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\XamlTypeInfo.g.cs
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.xaml
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.xaml
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.xbf
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.xbf
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\XamlSaveStateFile.xml
-C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\UWP SoundBoard.csproj.CoreCompileInputs.cache
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\App.xbf
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\MainPage.xbf
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\UWP SoundBoard.xr.xml
@@ -22,6 +10,18 @@ C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\Core\UWP S
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\UWP SoundBoard.build.appxrecipe
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\System.Runtime.dll
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\UWP SoundBoard.csproj.AssemblyReference.cache
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.g.i.cs
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.g.cs
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.g.cs
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.xaml
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.xaml
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\App.xbf
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\MainPage.xbf
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\UWP SoundBoard.csproj.CoreCompileInputs.cache
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\UWP SoundBoard.csproj.CopyComplete
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\UWP SoundBoard.exe
 C:\Users\alexL\Desktop\C#\UWP SoundBoard\UWP SoundBoard\obj\x86\Debug\UWP SoundBoard.pdb

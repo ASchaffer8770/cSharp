@@ -1,1 +1,0 @@
-C:\Users\alexL\Desktop\C#\UWP Weather\UWP Weather\UWP Weather.csproj;x86

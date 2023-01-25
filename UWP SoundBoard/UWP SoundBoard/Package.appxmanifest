@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="49c24c88-e299-45b7-aea3-394e22dcad34"
+    Name="f71ba677-944c-4fcd-9003-752f26ea51c1"
     Publisher="CN=alexL"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="49c24c88-e299-45b7-aea3-394e22dcad34" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="f71ba677-944c-4fcd-9003-752f26ea51c1" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>UWP SoundBoard</DisplayName>
