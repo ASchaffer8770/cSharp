@@ -38,6 +38,9 @@ namespace UWP_SoundBoard
             MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/taunt.png", Category = SoundCategory.Taunts });
             MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/warning.png", Category = SoundCategory.Warnings });
 
+            //Hiding back button until item is selected in split pane
+            BackButton.Visibility = Visibility.Collapsed;   
+
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -47,7 +50,10 @@ namespace UWP_SoundBoard
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            SoundManager.GetAllSounds(Sounds);
+            CategoryTextBlock.Text = "All Sounds";
+            BackButton.Visibility = Visibility.Collapsed;
+            MenuItemsListView.SelectedItem= null;
         }
 
         private void SearchAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
@@ -67,6 +73,9 @@ namespace UWP_SoundBoard
             //filter on category
             CategoryTextBlock.Text = menuItem.Category.ToString();
             SoundManager.GetSoundsByCategory(Sounds, menuItem.Category);
+
+            //making the back button visible
+            BackButton.Visibility = Visibility.Visible;
         }
 
         private void SoundGridView_ItemClick(object sender, ItemClickEventArgs e)
