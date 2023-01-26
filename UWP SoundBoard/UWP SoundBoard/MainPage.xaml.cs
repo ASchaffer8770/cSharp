@@ -5,8 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UWP_SoundBoard.Model;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,6 +28,7 @@ namespace UWP_SoundBoard
     {
         private ObservableCollection<Sound> Sounds;
         private List<MenuItem> MenuItems;
+        private List<String> Suggestions;
         public MainPage()
         {
             this.InitializeComponent();
@@ -50,6 +53,7 @@ namespace UWP_SoundBoard
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            SearchAutoSuggestBox.Text = "";
             SoundManager.GetAllSounds(Sounds);
             CategoryTextBlock.Text = "All Sounds";
             BackButton.Visibility = Visibility.Collapsed;
@@ -58,16 +62,22 @@ namespace UWP_SoundBoard
 
         private void SearchAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
-
+            SoundManager.GetAllSounds(Sounds);
+            Suggestions = Sounds.Where(p => p.Name.StartsWith(sender.Text)).Select(p => p.Name).ToList();
+            SearchAutoSuggestBox.ItemsSource = Suggestions;
         }
 
         private void SearchAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
-
+            SoundManager.GetSoundsByName(Sounds, sender.Text);
+            CategoryTextBlock.Text = sender.Text;
+            MenuItemsListView.SelectedItem = null;
+            BackButton.Visibility = Visibility.Visible;
         }
 
         private void MenuItemsListView_ItemClick(object sender, ItemClickEventArgs e)
         {
+            SearchAutoSuggestBox.Text = "";
             var menuItem = (MenuItem)e.ClickedItem;
             
             //filter on category
@@ -82,6 +92,40 @@ namespace UWP_SoundBoard
         {
             var sound = (Sound)e.ClickedItem;
             MyMediaElement.Source = new Uri(this.BaseUri, sound.AudioFile);
+        }
+
+        private async void SoundGridView_Drop(object sender, DragEventArgs e)
+        {
+            if (e.DataView.Contains(StandardDataFormats.StorageItems))
+            {
+                var items = await e.DataView.GetStorageItemsAsync();
+
+                if (items.Any())
+                {
+                    var storageFile = items[0] as StorageFile;
+                    var contentType = storageFile.ContentType;
+
+                    StorageFolder folder = ApplicationData.Current.LocalFolder;
+
+                    if (contentType == "audio/wav" || contentType == "audio/mpeg")
+                    {
+                        StorageFile newFile = await storageFile.CopyAsync(folder, storageFile.Name, NameCollisionOption.GenerateUniqueName);
+
+                        MyMediaElement.SetSource(await storageFile.OpenAsync(FileAccessMode.Read), contentType);
+                        MyMediaElement.Play();
+                    }
+                }
+            }
+        }
+
+        private void SoundGridView_DragOver(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = DataPackageOperation.Copy;
+
+            e.DragUIOverride.Caption = "drop to create a custom sound and tile";
+            e.DragUIOverride.IsCaptionVisible = true;
+            e.DragUIOverride.IsContentVisible = true;
+            e.DragUIOverride.IsGlyphVisible = true;
         }
     }
 }

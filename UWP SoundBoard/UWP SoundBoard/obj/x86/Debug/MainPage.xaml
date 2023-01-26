@@ -91,6 +91,9 @@
                     <GridView x:ConnectionId='10' Grid.Row="1" 
                               Name="SoundGridView"
                               SelectionMode="None"
+                              AllowDrop="True"
+                                                       
+                                                               
                                                            
                               IsItemClickEnabled="True"
                                                                  >
