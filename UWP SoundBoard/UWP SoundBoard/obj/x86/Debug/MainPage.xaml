@@ -82,7 +82,8 @@
                                 <Image x:ConnectionId='8' Name="MyImage"
                                        Height="112"
                                        Width="101"
-                                                                  />
+                                                                  
+                                       />
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
