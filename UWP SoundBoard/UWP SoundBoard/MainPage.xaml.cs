@@ -25,11 +25,19 @@ namespace UWP_SoundBoard
     public sealed partial class MainPage : Page
     {
         private ObservableCollection<Sound> Sounds;
+        private List<MenuItem> MenuItems;
         public MainPage()
         {
             this.InitializeComponent();
             Sounds = new ObservableCollection<Sound>();
             SoundManager.GetAllSounds(Sounds);
+
+            MenuItems = new List<MenuItem>();
+            MenuItems.Add(new MenuItem { IconFile ="Assets/Icons/animals.png", Category=SoundCategory.Animals});
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/cartoon.png", Category = SoundCategory.Cartoons });
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/taunt.png", Category = SoundCategory.Taunts });
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/warning.png", Category = SoundCategory.Warnings });
+
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -39,7 +47,7 @@ namespace UWP_SoundBoard
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void SearchAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
@@ -54,12 +62,17 @@ namespace UWP_SoundBoard
 
         private void MenuItemsListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            var menuItem = (MenuItem)e.ClickedItem;
+            
+            //filter on category
+            CategoryTextBlock.Text = menuItem.Category.ToString();
+            SoundManager.GetSoundsByCategory(Sounds, menuItem.Category);
         }
 
         private void SoundGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            var sound = (Sound)e.ClickedItem;
+            MyMediaElement.Source = new Uri(this.BaseUri, sound.AudioFile);
         }
     }
 }

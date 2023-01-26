@@ -52,13 +52,30 @@
                    OpenPaneLength="200">
             <SplitView.Pane>
                 <ListView IsItemClickEnabled="True"
+                          ItemsSource="{x:Bind  MenuItems}"
                           Name="MenuItemsListView"
-                          ItemClick="MenuItemsListView_ItemClick" />
-
+                          ItemClick="MenuItemsListView_ItemClick"
+                          Background="Gray">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="data:MenuItem">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{x:Bind IconFile}"
+                                       Height="35"
+                                       Width="35"
+                                       Margin="-10,10,0,10"/>
+                                <TextBlock Text="{x:Bind Category}"
+                                           FontSize="18"
+                                           Margin="10,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Foreground="Black"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid>
+                <Grid Margin="20,20,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
@@ -70,7 +87,7 @@
                     <TextBlock Name="CategoryTextBlock"
                                Text="All Sounds"
                                FontSize="24"
-                               />
+                               Foreground="White"/>
                     <GridView Grid.Row="1" 
                               Name="SoundGridView"
                               SelectionMode="None"
@@ -82,8 +99,7 @@
                                 <Image Name="MyImage"
                                        Height="112"
                                        Width="101"
-                                       Source="{x:Bind ImageFile}"
-                                       />
+                                       Source="{x:Bind ImageFile}"/>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>

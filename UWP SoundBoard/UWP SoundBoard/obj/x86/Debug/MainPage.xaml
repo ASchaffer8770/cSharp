@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <RelativePanel>
-            <Button x:ConnectionId='9' Name="HamburgerButton"
+            <Button x:ConnectionId='13' Name="HamburgerButton"
                     RelativePanel.AlignLeftWithPanel="True"
                                                  
                     FontFamily="Segoe MDL2 Assets"
@@ -25,7 +25,7 @@
                     Width="45"
                     FontSize="20"/>
             
-            <Button x:ConnectionId='10' Name="BackButton"
+            <Button x:ConnectionId='14' Name="BackButton"
                     RelativePanel.RightOf="HamburgerButton"
                                             
                     FontFamily="Segoe MDL2 Assets"
@@ -34,7 +34,7 @@
                     Width="45"
                     FontSize="20"/>
 
-            <AutoSuggestBox x:ConnectionId='11' Name="SearchAutoSuggestBox"
+            <AutoSuggestBox x:ConnectionId='15' Name="SearchAutoSuggestBox"
                                                                           
                                                                                 
                             RelativePanel.AlignRightWithPanel="True"
@@ -52,26 +52,43 @@
                    OpenPaneLength="200">
             <SplitView.Pane>
                 <ListView x:ConnectionId='3' IsItemClickEnabled="True"
+                                                           
                           Name="MenuItemsListView"
-                                                                  />
-
+                                                                 
+                          Background="Gray">
+                    <ListView.ItemTemplate>
+                        <DataTemplate                           >
+                            <StackPanel x:ConnectionId='5' Orientation="Horizontal">
+                                <Image x:ConnectionId='6'                           
+                                       Height="35"
+                                       Width="35"
+                                       Margin="-10,10,0,10"/>
+                                <TextBlock x:ConnectionId='7'                         
+                                           FontSize="18"
+                                           Margin="10,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Foreground="Black"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid>
+                <Grid Margin="20,20,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <MediaElement x:ConnectionId='4' Name="MyMediaElement"
+                    <MediaElement x:ConnectionId='8' Name="MyMediaElement"
                                   AutoPlay="True" />
 
-                    <TextBlock x:ConnectionId='5' Name="CategoryTextBlock"
+                    <TextBlock x:ConnectionId='9' Name="CategoryTextBlock"
                                Text="All Sounds"
                                FontSize="24"
-                               />
-                    <GridView x:ConnectionId='6' Grid.Row="1" 
+                               Foreground="White"/>
+                    <GridView x:ConnectionId='10' Grid.Row="1" 
                               Name="SoundGridView"
                               SelectionMode="None"
                                                            
@@ -79,11 +96,10 @@
                                                                  >
                         <GridView.ItemTemplate>
                             <DataTemplate                        >
-                                <Image x:ConnectionId='8' Name="MyImage"
+                                <Image x:ConnectionId='12' Name="MyImage"
                                        Height="112"
                                        Width="101"
-                                                                  
-                                       />
+                                                                  />
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
