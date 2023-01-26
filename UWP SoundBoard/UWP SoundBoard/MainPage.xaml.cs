@@ -53,7 +53,6 @@ namespace UWP_SoundBoard
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            SearchAutoSuggestBox.Text = "";
             SoundManager.GetAllSounds(Sounds);
             CategoryTextBlock.Text = "All Sounds";
             BackButton.Visibility = Visibility.Collapsed;
@@ -62,9 +61,22 @@ namespace UWP_SoundBoard
 
         private void SearchAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
+            if (String.IsNullOrEmpty(sender.Text)) goBack();
+
             SoundManager.GetAllSounds(Sounds);
-            Suggestions = Sounds.Where(p => p.Name.StartsWith(sender.Text)).Select(p => p.Name).ToList();
+            Suggestions = Sounds
+                .Where(p => p.Name.StartsWith(sender.Text))
+                .Select(p => p.Name)
+                .ToList();
             SearchAutoSuggestBox.ItemsSource = Suggestions;
+        }
+
+        private void goBack()
+        {
+            SoundManager.GetAllSounds(Sounds);
+            CategoryTextBlock.Text = "All Sounds";
+            MenuItemsListView.SelectedItem = null;
+            BackButton.Visibility = Visibility.Collapsed;
         }
 
         private void SearchAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
@@ -77,7 +89,7 @@ namespace UWP_SoundBoard
 
         private void MenuItemsListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            SearchAutoSuggestBox.Text = "";
+
             var menuItem = (MenuItem)e.ClickedItem;
             
             //filter on category
